@@ -1,4 +1,4 @@
-"""Script to extract video IDs from a YouTube playlist using yt-dlp
+"""Script to extract video IDs from a podcast feed using yt-dlp
 and write them to a corresponding log file."""
 
 import os
@@ -6,8 +6,8 @@ import sys
 import yt_dlp
 
 def get_playlist_video_ids(url):
-    """Given a YouTube playlist URL, return 
-    a list of video IDs in that playlist."""
+    """Given a podcast feed URL, return 
+    a list of podcasts in that feed."""
     ydl_opts = {
         "quiet": True,
         "skip_download": True,
@@ -29,7 +29,7 @@ def get_playlist_video_ids(url):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        playlist_input = input("Enter the YouTube playlist URL: ").strip()
+        playlist_input = input("Enter the podcast feed URL: ").strip()
         folder = input("Enter the folder path to save the log file: ").strip()
     else: 
         playlist_input = sys.argv[1]

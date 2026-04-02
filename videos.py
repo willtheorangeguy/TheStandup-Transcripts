@@ -15,7 +15,7 @@ def download_playlist(playlist_url):
         'outtmpl': '%(upload_date>%Y)s/%(title)s.%(ext)s',
         'noplaylist': False,
         'ignoreerrors': True,
-        'download_archive': '/downloaded_videos.log',
+        'download_archive': 'downloaded_videos.log',
         'remote-components': 'ejs:github',
         'concurrent-fragments': True,
         'no-mtime': True
